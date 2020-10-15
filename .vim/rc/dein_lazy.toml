@@ -1,0 +1,50 @@
+[[plugins]]
+repo = 'elzr/vim-json'
+on_ft = ['json']
+
+[[plugins]]
+repo = 'groenewege/vim-less'
+on_ft = ['less']
+
+[[plugins]]
+repo = 'stephpy/vim-yaml'
+on_ft = ['yaml']
+
+[[plugins]]
+repo = 'keith/swift.vim'
+on_ft = ['swift']
+
+[[plugins]]
+repo = 'digitaltoad/vim-jade'
+on_ft = ['jade']
+
+[[plugins]]
+repo = 'wavded/vim-stylus'
+on_ft = ['stylus']
+
+[[plugins]]
+repo = 'StanAngeloff/php.vim'
+on_ft = ['php']
+
+[[plugins]]
+repo = 'kchmck/vim-coffee-script'
+on_ft = ['coffee']
+
+[[plugins]]
+repo = 'dag/vim-fish'
+on_ft = ['fish']
+
+[[plugins]]
+repo = 'billyvg/tigris.nvim'
+on_ft = ['javascript', 'javascript.jsx']
+hook_post_update = '''
+  let g:dein#plugin.build = './install.sh'
+'''
+hook_add = """
+source ~/.config/nvim/plugins/tigris.rc.vim
+"""
+
+[[plugins]]
+repo = 'cespare/vim-toml'
+on_ft = ['toml']
+
