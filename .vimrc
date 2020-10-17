@@ -163,8 +163,6 @@ let g:webdevicons_enable_vimfiler = 1
 " Color scheme
 "-------------------------------------------------------------------------------
 
-let g:solarized_termtrans=1
-let g:solarized_termcolors=256
 colorscheme solarized
 
 "-------------------------------------------------------------------------------
