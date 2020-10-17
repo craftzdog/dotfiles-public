@@ -73,6 +73,8 @@ autocmd FileType yaml setlocal shiftwidth=2 tabstop=2
 
 " JavaScript
 au BufNewFile,BufRead *.es6 setf javascript
+" TypeScript
+au BufNewFile,BufRead *.tsx setf typescript
 " Markdown
 au BufNewFile,BufRead *.md set filetype=markdown
 " Flow
