@@ -35,16 +35,13 @@ repo = 'dag/vim-fish'
 on_ft = ['fish']
 
 [[plugins]]
-repo = 'billyvg/tigris.nvim'
-on_ft = ['javascript', 'javascript.jsx']
-hook_post_update = '''
-  let g:dein#plugin.build = './install.sh'
-'''
-hook_add = """
-source ~/.config/nvim/plugins/tigris.rc.vim
-"""
-
-[[plugins]]
 repo = 'cespare/vim-toml'
 on_ft = ['toml']
 
+[[plugins]]
+repo = 'yuezk/vim-js'
+on_ft = ['javascript', 'javascript.jsx']
+
+[[plugins]]
+repo = 'maxmellon/vim-jsx-pretty'
+on_ft = ['javascript', 'javascript.jsx']
