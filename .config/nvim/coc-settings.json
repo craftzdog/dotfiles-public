@@ -14,6 +14,9 @@
       "rootPatterns": [".flowconfig"]
     }
   },
+  "diagnostic.errorSign": "✘",
+  "diagnostic.warningSign": "",
+  "diagnostic.infoSign": "",
   "suggest.completionItemKindLabels": {
     "keyword": "\uf1de",
     "variable": "\ue79b",
@@ -32,7 +35,7 @@
     "module": "\uf40d",
     "color": "\ue22b",
     "property": "\ue624",
-    "field": "\uf9be",
+    "field": "\ue624",
     "unit": "\uf475",
     "event": "\ufacd",
     "file": "\uf723",
