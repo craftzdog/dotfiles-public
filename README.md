@@ -7,6 +7,7 @@
 - vim (NeoVim) config
   - Plugins are managed with [dein.vim](https://github.com/Shougo/dein.vim)
 - tmux config
+- git config
 
 ## How to use
 
