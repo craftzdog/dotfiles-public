@@ -71,7 +71,7 @@ if = '''!has('nvim')'''
 
 [[plugins]]
 repo = "neoclide/coc.nvim"
-merge = 0
+merged = 0
 rev = "release"
 hook_add = """
 source ~/.config/nvim/plugins/coc.rc.vim
