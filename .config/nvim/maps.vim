@@ -1,3 +1,5 @@
+" Description: Keymaps
+
 nnoremap <S-C-p> "0p
 " Delete without yank
 nnoremap <leader>d "_d
@@ -12,9 +14,6 @@ nnoremap dw vb"_d
 
 " Select all
 nmap <C-a> gg<S-v>G
-
-" Open BufExplorer
-nmap \\ \be
 
 " Save with root permission
 command! W w !sudo tee > /dev/null %
@@ -31,17 +30,17 @@ vnoremap <silent> # :<C-U>
   \escape(@", '?\.*$^~['), '\_s\+', '\\_s\\+', 'g')<CR><CR>
   \gV:call setreg('"', old_reg, old_regtype)<CR>
 
-"-------------------------------------------------------------------------------
+"-----------------------------
 " Tabs
-"-------------------------------------------------------------------------------
+
 " Open current directory
 nmap te :tabedit 
 nmap <S-Tab> :tabprev<Return>
 nmap <Tab> :tabnext<Return>
 
-"-------------------------------------------------------------------------------
+"------------------------------
 " Windows
-"-------------------------------------------------------------------------------
+
 " Split window
 nmap ss :split<Return><C-w>w
 nmap sv :vsplit<Return><C-w>w
@@ -61,9 +60,3 @@ nmap <C-w><right> <C-w>>
 nmap <C-w><up> <C-w>+
 nmap <C-w><down> <C-w>-
 
-"-------------------------------------------------------------------------------
-" Plugins
-"-------------------------------------------------------------------------------
-
-"-- fugitive
-cnoreabbrev gopen Gbrowse

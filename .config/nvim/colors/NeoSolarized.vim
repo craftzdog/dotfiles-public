@@ -2,7 +2,7 @@
 " Author:   iCyMind <icyminnd@gmail.com>
 " URL:      https://github.com/iCyMind/NeoSolarized
 " License:  MIT
-" Modified: Mon Sep 26 14:45:22 CST 2016
+" Modified: Wed Jun 12 18:41:42 PDT 2016
 
 " Usage "{{{
 "
@@ -19,13 +19,18 @@
 " ---------------------------------------------------------------------
 " OPTIONS:
 " ---------------------------------------------------------------------
-" g:neosolarized_contrast
-" g:neosolarized_visibility
-" g:neosolarized_diffmode
-" g:neosolarized_termtrans
+" Font styles:
 " g:neosolarized_bold
-" g:neosolarized_underline
 " g:neosolarized_italic
+" g:neosolarized_underline
+"
+" Appearance:
+" g:neosolarized_contrast
+" g:neosolarized_diffmode
+" g:neosolarized_termBoldAsBright
+" g:neosolarized_termtrans
+" g:neosolarized_vertSplitBgTrans
+" g:neosolarized_visibility
 "
 " ---------------------------------------------------------------------
 " INSTALLATION:
@@ -108,13 +113,17 @@
 " Default option values"{{{
 " ---------------------------------------------------------------------
 
-let g:neosolarized_contrast = get(g:, "neosolarized_contrast", "normal")
-let g:neosolarized_visibility = get(g:, "neosolarized_visibility", "normal")
-let g:neosolarized_diffmode = get(g:, "neosolarized_diffmode", "normal")
+" Font styles:
 let g:neosolarized_bold = get(g:, "neosolarized_bold", 1)
-let g:neosolarized_underline = get(g:, "neosolarized_underline", 1)
 let g:neosolarized_italic = get(g:, "neosolarized_italic", 0)
+let g:neosolarized_underline = get(g:, "neosolarized_underline", 1)
+
+" Appearance:
+let g:neosolarized_contrast = get(g:, "neosolarized_contrast", "normal")
+let g:neosolarized_diffmode = get(g:, "neosolarized_diffmode", "normal")
+let g:neosolarized_termBoldAsBright = get(g:, "neosolarized_termBoldAsBright", 1)
 let g:neosolarized_termtrans = get(g:, "neosolarized_termtrans", 0)
+let g:neosolarized_visibility = get(g:, "neosolarized_visibility", "normal")
 let g:neosolarized_vertSplitBgTrans = get(g:, "neosolarized_vertSplitBgTrans", 1)
 
 "}}}
@@ -513,7 +522,9 @@ exe "hi! PmenuSbar"      .s:fmt_none   .s:fg_base2  .s:bg_base0   .s:fmt_revbb
 exe "hi! PmenuThumb"     .s:fmt_none   .s:fg_base0  .s:bg_base03  .s:fmt_revbb
 exe "hi! TabLine"        .s:fmt_none   .s:fg_base0  .s:bg_base02  .s:sp_base0
 exe "hi! TabLineFill"    .s:fmt_none   .s:fg_base0  .s:bg_base02  .s:sp_base0
-exe "hi! TabLineSel"     .s:fmt_none   .s:fg_base01  .s:bg_base2  .s:sp_base0  .s:fmt_revr
+exe "hi! TabLineSel"     .s:fmt_none   .s:fg_base01 .s:bg_base2   .s:sp_base0  .s:fmt_revr
+exe "hi! TabLineSep"     .s:fmt_none   .s:fg_base02 .s:bg_base01  .s:sp_base0  .s:fmt_revr
+exe "hi! TabLineSep2"    .s:fmt_none   .s:fg_base02 .s:bg_base01  .s:sp_base0
 exe "hi! CursorColumn"   .s:fmt_none   .s:fg_none   .s:bg_base02
 exe "hi! CursorLine"     .s:fmt_uopt   .s:fg_none   .s:bg_base02  .s:sp_base1
 exe "hi! CursorLineNr"   .s:fmt_uopt   .s:fg_none   .s:bg_base02  .s:sp_base1
@@ -869,14 +880,26 @@ let g:terminal_color_4 = s:gui_blue
 let g:terminal_color_5 = s:gui_magenta
 let g:terminal_color_6 = s:gui_cyan
 let g:terminal_color_7 = s:gui_base2
-let g:terminal_color_8 = s:gui_base02
-let g:terminal_color_9 = s:gui_orange
-let g:terminal_color_10 = s:gui_base01
-let g:terminal_color_11 = s:gui_base00
-let g:terminal_color_12 = s:gui_base0
-let g:terminal_color_13 = s:gui_violet
-let g:terminal_color_14 = s:gui_base1
-let g:terminal_color_15 = s:gui_base3
+
+if g:neosolarized_termBoldAsBright == 1
+  let g:terminal_color_8 = s:gui_base02
+  let g:terminal_color_9 = s:gui_orange
+  let g:terminal_color_10 = s:gui_base01
+  let g:terminal_color_11 = s:gui_base00
+  let g:terminal_color_12 = s:gui_base0
+  let g:terminal_color_13 = s:gui_violet
+  let g:terminal_color_14 = s:gui_base1
+  let g:terminal_color_15 = s:gui_base3
+else
+  let g:terminal_color_8 = g:terminal_color_0
+  let g:terminal_color_9 = g:terminal_color_1
+  let g:terminal_color_10 = g:terminal_color_2
+  let g:terminal_color_11 = g:terminal_color_3
+  let g:terminal_color_12 = g:terminal_color_4
+  let g:terminal_color_13 = g:terminal_color_5
+  let g:terminal_color_14 = g:terminal_color_6
+  let g:terminal_color_15 = g:terminal_color_7
+endif
 "}}}
 
 " Utility autocommand "{{{
