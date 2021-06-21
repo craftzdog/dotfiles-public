@@ -1,14 +1,6 @@
 if has("nvim")
   let g:plug_home = stdpath('data') . '/plugged'
 endif
-let s:root = expand('<sfile>:p:h')
-
-function s:load_config(relativePath)
-  let l:fullPath = s:root . '/'. a:relativePath
-  "exec "source " . l:fullPath
-endfunction
-
-command -nargs=1 HookAfter au VimEnter * call s:load_config(<f-args>)
 
 call plug#begin()
 
