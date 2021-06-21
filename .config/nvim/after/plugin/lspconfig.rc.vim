@@ -54,26 +54,26 @@ local on_attach = function(client, bufnr)
   --protocol.SymbolKind = { }
   protocol.CompletionItemKind = {
     '', -- Text
-    '\u{f09a}', -- Method
-    '\u{0192}', -- Function
-    '\u{0192}', -- Constructor
+    '', -- Method
+    '', -- Function
+    '', -- Constructor
     '', -- Field
     '', -- Variable
     '', -- Class
-    '\u{f417}', -- Interface
-    '\u{f40d}', -- Module
+    'ﰮ', -- Interface
+    '', -- Module
     '', -- Property
     '', -- Unit
-    '\u{f89f}', -- Value
+    '', -- Value
     '', -- Enum
-    '\u{f1de}', -- Keyword
-    '\u{e60b}', -- Snippet
+    '', -- Keyword
+    '﬌', -- Snippet
     '', -- Color
     '', -- File
-    '\u{fa46}', -- Reference
+    '', -- Reference
     '', -- Folder
     '', -- EnumMember
-    '\u{f8fe}', -- Constant
+    '', -- Constant
     '', -- Struct
     '', -- Event
     'ﬦ', -- Operator
