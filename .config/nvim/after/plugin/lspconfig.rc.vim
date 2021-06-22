@@ -96,11 +96,11 @@ nvim_lsp.diagnosticls.setup {
   init_options = {
     linters = {
       eslint = {
-        command = 'eslint',
+        command = 'eslint_d',
         rootPatterns = { '.git' },
         debounce = 100,
         args = { '--stdin', '--stdin-filename', '%filepath', '--format', 'json' },
-        sourceName = 'eslint',
+        sourceName = 'eslint_d',
         parseJson = {
           errorsRoot = '[0].messages',
           line = 'line',
