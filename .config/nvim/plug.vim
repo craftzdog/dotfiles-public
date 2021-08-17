@@ -6,7 +6,6 @@ call plug#begin()
 
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
-Plug 'cohama/lexima.vim'
 
 if has("nvim")
   Plug 'hoob3rt/lualine.nvim'
@@ -22,6 +21,7 @@ if has("nvim")
   Plug 'nvim-lua/popup.nvim'
   Plug 'nvim-lua/plenary.nvim'
   Plug 'nvim-telescope/telescope.nvim'
+  Plug 'windwp/nvim-autopairs'
 endif
 
 Plug 'groenewege/vim-less', { 'for': 'less' }
