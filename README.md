@@ -27,7 +27,7 @@ Requires Neovim (>= 0.5)
 
 - [Fish shell](https://fishshell.com/)
 - [Fisher](https://github.com/jorgebucaran/fisher) - Plugin manager
-- [Shellder](https://github.com/simnalamburt/shellder) - Shell theme
+- [Tide](https://github.com/IlanCosman/tide) - Shell theme
 - [Nerd fonts](https://github.com/ryanoasis/nerd-fonts) - Powerline-patched fonts
 - [z for fish](https://github.com/jethrokuan/z) - Directory jumping
 - [Exa](https://the.exa.website/) - `ls` replacement
