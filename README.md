@@ -34,7 +34,7 @@ Requires Neovim (>= 0.5)
 - [Fish shell](https://fishshell.com/)
 - [Fisher](https://github.com/jorgebucaran/fisher) - Plugin manager
 - [Tide](https://github.com/IlanCosman/tide) - Shell theme
-- [Nerd fonts](https://github.com/ryanoasis/nerd-fonts) - Powerline-patched fonts
+- [Nerd fonts](https://github.com/ryanoasis/nerd-fonts) - Powerline-patched fonts. I use Hack.
 - [z for fish](https://github.com/jethrokuan/z) - Directory jumping
 - [Exa](https://the.exa.website/) - `ls` replacement
 - [ghq](https://github.com/x-motemen/ghq) - Local Git repository organizer
