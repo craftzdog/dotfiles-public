@@ -13,7 +13,7 @@ Inkdrop - A cross-platform Markdown note-taking app
 ## Contents
 
 - vim (NeoVim) config
-  - Plugins are managed with [dein.vim](https://github.com/Shougo/dein.vim)
+  - Plugins are managed with [vim-plug](https://github.com/junegunn/vim-plug)
 - tmux config
 - git config
 - fish config
