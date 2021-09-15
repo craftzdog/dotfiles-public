@@ -1,6 +1,3 @@
-[user]
-	email = hi@craftz.dog
-	name = Takuya Matsuyama
 [core]
 	excludesfile = ~/.gitignore
 	editor = nvim
