@@ -4,11 +4,11 @@
 
 **Warning**: Don’t blindly use my settings unless you know what that entails. Use at your own risk!
 
-## Sponsor
+#### Looking for a Markdown note-taking app?
+
+Check out my app called Inkdrop:
 
 [![Inkdrop](./images/inkdrop.png)](https://www.inkdrop.app/)
-
-Inkdrop - A cross-platform Markdown note-taking app
 
 ## Contents
 
