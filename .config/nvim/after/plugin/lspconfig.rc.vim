@@ -53,8 +53,6 @@ local on_attach = function(client, bufnr)
     vim.api.nvim_command [[augroup END]]
   end
 
-  require'completion'.on_attach(client, bufnr)
-
   --protocol.SymbolKind = { }
   protocol.CompletionItemKind = {
     '', -- Text
@@ -85,13 +83,21 @@ local on_attach = function(client, bufnr)
   }
 end
 
+
+-- Set up completion using nvim_cmp with LSP source
+local capabilities = require('cmp_nvim_lsp').update_capabilities(
+  vim.lsp.protocol.make_client_capabilities()
+)
+
 nvim_lsp.flow.setup {
-  on_attach = on_attach
+  on_attach = on_attach,
+  capabilities = capabilities
 }
 
 nvim_lsp.tsserver.setup {
   on_attach = on_attach,
-  filetypes = { "typescript", "typescriptreact", "typescript.tsx" }
+  filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
+  capabilities = capabilities
 }
 
 nvim_lsp.diagnosticls.setup {
