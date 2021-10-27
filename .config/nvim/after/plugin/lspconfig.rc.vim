@@ -129,23 +129,26 @@ nvim_lsp.diagnosticls.setup {
     formatters = {
       eslint_d = {
         command = 'eslint_d',
+        rootPatterns = { '.git' },
         args = { '--stdin', '--stdin-filename', '%filename', '--fix-to-stdout' },
         rootPatterns = { '.git' },
       },
       prettier = {
-        command = 'prettier',
-        args = { '--stdin-filepath', '%filename' }
+        command = 'prettier_d_slim',
+        rootPatterns = { '.git' },
+        -- requiredFiles: { 'prettier.config.js' },
+        args = { '--stdin', '--stdin-filepath', '%filename' }
       }
     },
     formatFiletypes = {
       css = 'prettier',
-      javascript = 'eslint_d',
-      javascriptreact = 'eslint_d',
+      javascript = 'prettier',
+      javascriptreact = 'prettier',
       json = 'prettier',
       scss = 'prettier',
       less = 'prettier',
-      typescript = 'eslint_d',
-      typescriptreact = 'eslint_d',
+      typescript = 'prettier',
+      typescriptreact = 'prettier',
       json = 'prettier',
       markdown = 'prettier',
     }
