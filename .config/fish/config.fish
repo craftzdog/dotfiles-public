@@ -44,7 +44,7 @@ switch (uname)
   case Darwin
     source (dirname (status --current-filename))/config-osx.fish
   case Linux
-    # Do nothing
+    source (dirname (status --current-filename))/config-linux.fish
   case '*'
     source (dirname (status --current-filename))/config-windows.fish
 end
