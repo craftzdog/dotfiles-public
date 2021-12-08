@@ -17,6 +17,7 @@ Check out my app called Inkdrop:
 - tmux config
 - git config
 - fish config
+- PowerShell config
 
 ## Vim setup
 
@@ -30,7 +31,7 @@ Requires Neovim (>= 0.5)
 - [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim) - A highly extendable fuzzy finder over lists
 - [defx.nvim](https://github.com/Shougo/defx.nvim) - A file explorer
 
-## Shell setup
+## Shell setup (macOS & Linux)
 
 - [Fish shell](https://fishshell.com/)
 - [Fisher](https://github.com/jorgebucaran/fisher) - Plugin manager
@@ -40,6 +41,16 @@ Requires Neovim (>= 0.5)
 - [Exa](https://the.exa.website/) - `ls` replacement
 - [ghq](https://github.com/x-motemen/ghq) - Local Git repository organizer
 - [peco](https://github.com/peco/peco) - Interactive filtering
+
+## PowerShell setup (Windows)
+
+- [Scoop](https://scoop.sh/)
+- [Git for Windows](https://gitforwindows.org/)
+- [Oh My Posh](https://ohmyposh.dev/)
+- [Terminal Icons](https://github.com/devblackops/Terminal-Icons)
+- [PSReadLine](https://docs.microsoft.com/en-us/powershell/module/psreadline/)
+- [z](https://www.powershellgallery.com/packages/z)
+- [PSFzf](https://github.com/kelleyma49/PSFzf)
 
 ## How to use
 
