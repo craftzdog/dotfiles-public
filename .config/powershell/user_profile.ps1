@@ -1,3 +1,6 @@
+# set PowerShell to UTF-8
+[console]::InputEncoding = [console]::OutputEncoding = New-Object System.Text.UTF8Encoding
+
 Import-Module posh-git
 Import-Module oh-my-posh
 $omp_config = Join-Path $PSScriptRoot ".\takuya.omp.json"
