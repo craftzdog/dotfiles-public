@@ -32,6 +32,41 @@ Set-Alias less 'C:\Program Files\Git\usr\bin\less.exe'
 # Utilities
 function which ($command) {
   Get-Command -Name $command -ErrorAction SilentlyContinue |
-    Select-Object -ExpandProperty Path -ErrorAction SilentlyContinue
+  Select-Object -ExpandProperty Path -ErrorAction SilentlyContinue
 }
 
+function search-google {
+  param(
+    [Parameter(Mandatory = $false, Position = 0)]`
+      [string]$SearchString
+  )
+  process {
+    if (!$SearchString) {
+      $SearchString = Get-Clipboard;
+    }
+    $URL = $SearchString -replace ' ', '+';
+    $URL = "https://www.google.com/search?q=" + $URL;
+    Write-Output ("Searching Google. . .");
+    Write-Output ("Take a look at the browser. . .");
+    Start-Process chrome.exe $URL;
+  }
+}
+Set-Alias google search-google
+
+function search-github {
+  param (
+    [Parameter(Mandatory = $false, Position = 0)]`
+      [string]$SearchString
+  )
+  process {
+    if (!$SearchString) {
+      $SearchString = Get-Clipboard;
+    }
+    $URL = $SearchString -replace ' ', '+';
+    $URL = "https://github.com/search?q=" + $URL;
+    Write-Output("Searching GitHub. . .");
+    Write-Output("Take a look at the browser. . .");
+    Start-Process chrome.exe $URL;
+  }
+}
+Set-Alias github search-github
