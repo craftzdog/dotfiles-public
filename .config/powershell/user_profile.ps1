@@ -35,3 +35,10 @@ function which ($command) {
     Select-Object -ExpandProperty Path -ErrorAction SilentlyContinue
 }
 
+# Touch Utility
+function touch { 
+  New-Item -ItemType File -Name ($args[0]) 
+}
+
+
+
