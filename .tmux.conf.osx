@@ -1,2 +1,2 @@
-# osx clipboard
-#set-option -g default-command "reattach-to-user-namespace -l fish"
+# sync clipboard
+set-option -g default-command "which reattach-to-user-namespace > /dev/null && reattach-to-user-namespace -l $SHELL || $SHELL"
