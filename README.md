@@ -1,4 +1,6 @@
-![cover](./images/cover.png)
+![fish screenshot](./images/screenshot-1.png)
+
+![nvim screenshot](./images/screenshot-2.png)
 
 # Takuya's dotfiles
 
