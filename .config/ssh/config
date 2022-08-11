@@ -1,0 +1,44 @@
+Host zheng-3090
+    # ipv4
+    # HostName 111.186.40.79
+    # ipv6
+    HostName 2001:da8:8000:6460:ae1f:6bff:fef5:aaca
+    User zheng
+
+Host zheng-70
+    # ipv4
+    # HostName 111.186.40.70
+    # ipv6
+    HostName 2001:da8:8000:6460:ae1f:6bff:fea1:12e8
+    User zheng
+
+Host math
+    # ipv4
+    # HostName 202.120.13.117
+    HostName 2001:da8:8000:6460:4ed9:8fff:fe44:5e52
+    User xuzhiqin_02
+
+Host pi-sjtu
+    HostName login.hpc.sjtu.edu.cn
+    User matjxt-mz
+    # 2&gpTKPd
+
+Host sy-sjtu
+    HostName sylogin1.hpc.sjtu.edu.cn
+    User matjxt-mz
+    # 2&gpTKPd
+
+Host im
+    HostName 202.121.181.119
+    ProxyJump sy-sjtu
+    Port 8029
+    User mazheng
+
+Host im2
+    HostName 202.121.181.119
+    ProxyJump sy-sjtu
+    Port 8027
+    User mazheng
+
+Host *
+    ServerAliveInterval 240
