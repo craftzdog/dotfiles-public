@@ -66,6 +66,11 @@ protocol.CompletionItemKind = {
 local capabilities = require('cmp_nvim_lsp').update_capabilities(
   vim.lsp.protocol.make_client_capabilities()
 )
+local has = function(x)
+  return vim.fn.has(x) == 1
+end
+
+local is_bsd = has "bsd"
 
 nvim_lsp.flow.setup {
   on_attach = on_attach,
@@ -78,6 +83,8 @@ nvim_lsp.tsserver.setup {
   cmd = { "typescript-language-server", "--stdio" },
   capabilities = capabilities
 }
+
+if (not is_bsd) then
 
 nvim_lsp.sourcekit.setup {
   on_attach = on_attach,
@@ -100,6 +107,8 @@ nvim_lsp.sumneko_lua.setup {
     },
   },
 }
+
+end
 
 nvim_lsp.tailwindcss.setup {}
 
