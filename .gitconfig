@@ -39,7 +39,10 @@
 [hub]
   protocol = https
 [github]
-	user = craftzdog
+	user = mazhengcn
+[user]
+	email = mazhengcn@outlook.com
+	name = Zheng Ma
 [diff]
   tool = nvimdiff
 [difftool "nvimdiff"]
@@ -55,9 +58,6 @@
 	process = git-lfs filter-process
 [ghq]
   root = ~/.ghq
-[user]
-	email = mazhengcn@outlook.com
-	name = Zheng Ma
 # For WSL
 # [credential]
 # 	helper = /mnt/c/Program\\ Files/Git/mingw64/bin/git-credential-manager-core.exe
