@@ -1,6 +1,7 @@
 require('craftzdog.base')
 require('craftzdog.highlights')
 require('craftzdog.maps')
+require('craftzdog.bootstrap')
 require('craftzdog.plugins')
 
 local has = function(x)
