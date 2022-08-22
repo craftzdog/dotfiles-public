@@ -1,10 +1,9 @@
 local status, packer = pcall(require, "packer")
+
 if (not status) then
   print("Packer is not installed")
   return
 end
-
-vim.cmd [[packadd packer.nvim]]
 
 packer.startup(function(use)
   use 'wbthomason/packer.nvim'
@@ -46,4 +45,18 @@ packer.startup(function(use)
 
   use 'lewis6991/gitsigns.nvim'
   use 'dinhhuy258/git.nvim' -- For git blame & browse
+
+  if packer_bootstrap then
+    packer.sync()
+  end
 end)
+
+vim.api.nvim_exec(
+  [[
+  augroup packer_ide_config
+    autocmd!
+    autocmd BufWritePost plugins.lua source <afile> | PackerSync
+  augroup end
+]],
+  false
+)
