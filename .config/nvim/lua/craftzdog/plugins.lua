@@ -28,7 +28,7 @@ packer.startup(function(use)
   use 'L3MON4D3/LuaSnip'
   use {
     'nvim-treesitter/nvim-treesitter',
-    run = ':TSUpdate'
+    run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
   }
   use 'kyazdani42/nvim-web-devicons' -- File icons
   use 'nvim-telescope/telescope.nvim'
