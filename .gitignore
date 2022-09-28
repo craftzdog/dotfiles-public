@@ -5,6 +5,7 @@
 .*~
 *~
 .DS_Store
+._*
 *.sw[po]
 tags
 TAGS
