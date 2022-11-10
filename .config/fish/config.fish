@@ -9,13 +9,45 @@ set -g theme_display_user yes
 set -g theme_hide_hostname no
 set -g theme_hostname always
 
-# aliases
+# common aliases
 alias ls "ls -p -G"
 alias la "ls -A"
 alias ll "ls -l"
 alias lla "ll -A"
-alias g git
+
+alias h="history"
+alias vim="nvim"
+alias intel="env /usr/bin/arch -x86_64 /bin/zsh --login"
+alias arm="env /usr/bin/arch -arm64 /bin/zsh --login"
+alias ibrew="arch -x86_64 /usr/local/bin/brew"
+alias pyenv86="arch -x86_64 pyenv"
+
 command -qv nvim && alias vim nvim
+
+# git aliases
+alias g git
+alias gchk = "git checkout"
+alias gp = "git pull"
+
+# docker aliases
+alias dkr "docker"
+alias dcm "docker-compose"
+
+# vscode aliases
+alias vs="code"
+
+# python aliases
+alias python="python3"
+alias pip="pip3"
+alias supe="sudo pipenv"
+alias pe="pipenv"
+alias per="pipenv run"
+
+# rust, cargo
+alias rtc="rustc"
+alias cg="cargo"
+alias cgb="cargo build"
+alias cgr="cargo run"
 
 set -gx EDITOR nvim
 
