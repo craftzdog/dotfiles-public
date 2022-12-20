@@ -34,6 +34,11 @@ packer.startup(function(use)
   use 'nvim-telescope/telescope-file-browser.nvim'
   use 'windwp/nvim-autopairs'
   use 'windwp/nvim-ts-autotag'
+  use { 'numToStr/Comment.nvim',
+    requires = {
+      'JoosepAlviste/nvim-ts-context-commentstring'
+    }
+  }
   use 'norcalli/nvim-colorizer.lua'
   use 'folke/zen-mode.nvim'
   use({
