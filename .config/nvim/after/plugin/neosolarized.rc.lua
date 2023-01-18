@@ -12,7 +12,9 @@ local Group = cb.Group
 local groups = cb.groups
 local styles = cb.styles
 
+Color.new('white', '#ffffff')
 Color.new('black', '#000000')
+Group.new('Normal', colors.base1, colors.NONE, styles.NONE)
 Group.new('CursorLine', colors.none, colors.base03, styles.NONE, colors.base1)
 Group.new('CursorLineNr', colors.yellow, colors.black, styles.NONE, colors.base1)
 Group.new('Visual', colors.none, colors.base03, styles.reverse)
@@ -30,3 +32,5 @@ Group.new("DiagnosticUnderlineError", colors.none, colors.none, styles.undercurl
 Group.new("DiagnosticUnderlineWarn", colors.none, colors.none, styles.undercurl, cWarn)
 Group.new("DiagnosticUnderlineInfo", colors.none, colors.none, styles.undercurl, cInfo)
 Group.new("DiagnosticUnderlineHint", colors.none, colors.none, styles.undercurl, cHint)
+
+Group.new("HoverBorder", colors.yellow, colors.none, styles.NONE)
