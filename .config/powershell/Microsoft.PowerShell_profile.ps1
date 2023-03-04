@@ -1,9 +1,9 @@
 # set PowerShell to UTF-8
 [console]::InputEncoding = [console]::OutputEncoding = New-Object System.Text.UTF8Encoding
 
-Import-Module posh-git
-oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH/takuya.omp.json" | Invoke-Expression
+Invoke-Expression (&starship init powershell)
 
+Import-Module posh-git
 Import-Module -Name Terminal-Icons
 
 # PSReadLine
