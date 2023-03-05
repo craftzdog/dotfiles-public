@@ -2,6 +2,10 @@
 [console]::InputEncoding = [console]::OutputEncoding = New-Object System.Text.UTF8Encoding
 
 Invoke-Expression (&starship init powershell)
+Invoke-Expression (& {
+    $hook = if ($PSVersionTable.PSVersion.Major -lt 6) { 'prompt' } else { 'pwd' }
+    (zoxide init --hook $hook powershell | Out-String)
+})
 
 Import-Module posh-git
 Import-Module -Name Terminal-Icons
