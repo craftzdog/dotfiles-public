@@ -11,74 +11,41 @@
 import:
   - ~/.config/alacritty/themes/themes/nord.yaml
 
-window:
-  # Window decorations
-  #
-  # Values for `decorations`:
-  #     - full: Borders and title bar
-  #     - none: Neither borders nor title bar
-  #
-  # Values for `decorations` (macOS only):
-  #     - transparent: Title bar, transparent background and title bar buttons
-  #     - buttonless: Title bar, transparent background and no title bar buttons
-  decorations: buttonless
+env:
+  TERM: xterm-256color
 
-  # Background opacity
-  #
-  # Window opacity as a floating point number from `0.0` to `1.0`.
-  # The value `0.0` is completely transparent and `1.0` is opaque.
+window:
+  padding:
+    x: 10
+    y: 10
+  class:
+    instance: Alacritty
+    general: Alacritty
+  decorations: buttonless
   opacity: 0.9
 
 # Font configuration
 font:
-  # Normal (roman) font face
   normal:
-    # Font family
-    #
-    # Default:
-    #   - (macOS) Menlo
-    #   - (Linux/BSD) monospace
-    #   - (Windows) Consolas
-    family: 'JetBrainsMono NF'
-
-    # The `style` can be specified to pick a specific face.
+    family: JetBrainsMono NF
     style: Regular
-
-  # Bold font face
   bold:
-    # Font family
-    #
-    # If the bold family is not specified, it will fall back to the
-    # value specified for the normal font.
-    family: 'JetBrainsMono NF'
-
-    # The `style` can be specified to pick a specific face.
+    family: JetBrainsMono NF
     style: Bold
-
-  # Italic font face
   italic:
-    # Font family
-    #
-    # If the italic family is not specified, it will fall back to the
-    # value specified for the normal font.
-    family: 'JetBrainsMono NF'
-
-    # The `style` can be specified to pick a specific face.
+    family: JetBrainsMono NF
     style: Italic
-
-  # Bold italic font face
   bold_italic:
-    # Font family
-    #
-    # If the bold italic family is not specified, it will fall back to the
-    # value specified for the normal font.
-    family: 'JetBrainsMono NF'
-
-    # The `style` can be specified to pick a specific face.
+    family: JetBrainsMono NF
     style: Bold Italic
-
   # Point size
   size: 16.0
+
+draw_bold_text_with_bright_colors: true
+
+scrolling:
+  history: 10000
+  multiplier: 3
 
 # Live config reload (changes require restart)
 live_config_reload: true
