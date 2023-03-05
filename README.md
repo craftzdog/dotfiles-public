@@ -44,28 +44,29 @@ Requires [Neovim](https://neovim.io/) (>= 0.8)
 - [folke/zen-mode.nvim](https://github.com/folke/zen-mode.nvim) - Distraction-free mode
 - [iamcco/markdown-preview.nvim](https://github.com/iamcco/markdown-preview.nvim) - Markdown live preview
 
-## Shell setup (macOS & Linux)
+## Shell setup (Linux & macOS & Windows)
+
+- [Starship](https://starship.rs) - The minimal, blazing-fast, and infinitely customizable prompt for any shell
+- [Nerd fonts](https://github.com/ryanoasis/nerd-fonts) - Powerline-patched fonts. I use [JetBrains Mono](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/JetBrainsMono)
+- [Exa](https://the.exa.website/) - `ls` replacement
+- [Zoxide](https://github.com/ajeetdsouza/zoxide) -  A smarter `cd` command, inspired by `z` and `autojump`
+- [Fzf](https://github.com/junegunn/fzf) - A general-purpose command-line fuzzy finde
+- [Delta](https://github.com/dandavison/delta) - A syntax-highlighting pager for git, diff, and grep output 
+- [Ghq](https://github.com/x-motemen/ghq) - Local git repository organizer
+- [Peco](https://github.com/peco/peco) - Interactive filtering
+
+### For Linux & macOS
 
 - [Alacritty](https://alacritty.org) - A fast, cross-platform, OpenGL terminal emulator
 - [Zsh shell](https://zsh.sourceforge.io) - A shell designed for interactive use
 - [Oh my zsh](https://ohmyz.sh) - An open source, community-driven framework for managing your zsh configuration
-- [Starship](https://starship.rs) - The minimal, blazing-fast, and infinitely customizable prompt for any shell
-- [Nerd fonts](https://github.com/ryanoasis/nerd-fonts) - Powerline-patched fonts. I use JetBrainsMono NF.
-- [Exa](https://the.exa.website/) - `ls` replacement
-- [Zoxide](https://github.com/ajeetdsouza/zoxide) -  A smarter `cd` command, inspired by `z` and `autojump`
-- [Fzf](https://github.com/junegunn/fzf) - A general-purpose command-line fuzzy finde
-- [Ghq](https://github.com/x-motemen/ghq) - Local git repository organizer
-- [Peco](https://github.com/peco/peco) - Interactive filtering
 
-## PowerShell setup (Windows)
+### For PowerShell on Windows
 
 - [Winget](https://github.com/microsoft/winget-cli) - Windows Package Manager Client
 - [Scoop](https://scoop.sh/) - A command-line installer
-- [Starship](https://starship.rs) - The minimal, blazing-fast, and infinitely customizable prompt for any shell
-- [Nerd fonts](https://github.com/ryanoasis/nerd-fonts) - Powerline-patched fonts. I use JetBrainsMono NF.
 - [Terminal Icons](https://github.com/devblackops/Terminal-Icons) - Folder and file icons
 - [Git for Windows](https://gitforwindows.org/) - Git for Windows
-- [Zoxide](https://github.com/ajeetdsouza/zoxide) -  A smarter `cd` command, inspired by `z` and `autojump`
 - [PSFzf](https://github.com/kelleyma49/PSFzf) - Fuzzy finder
 - [PSReadLine](https://docs.microsoft.com/en-us/powershell/module/psreadline/) - Cmdlets for customizing the editing environment, used for autocompletion
 
