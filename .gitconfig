@@ -1,9 +1,19 @@
 [core]
+  pager = delta
 	excludesfile = ~/.gitignore
 	editor = nvim
 	ignorecase = false
+[delta]
+  side-by-side = true
+  line-numbers-left-format = ""
+  line-numbers-right-format = "│ "
+  syntax-theme = Nord
+[interactive]
+  diffFilter = delta --color-only
 [push]
   default = simple
+[merge]
+    conflictstyle = diff3
 [color]
   status = auto
   diff = auto
@@ -35,7 +45,6 @@
   edit-unmerged = "!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; vim `f`"
   # add conflicted file on merge
   add-unmerged = "!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; git add `f`"
-
 [hub]
   protocol = https
 [github]
@@ -44,6 +53,7 @@
 	email = mazhengcn@outlook.com
 	name = Zheng Ma
 [diff]
+  colorMoved = default
   tool = nvimdiff
 [difftool "nvimdiff"]
 	cmd = nvim -d \"$LOCAL\" \"$REMOTE\"
@@ -61,3 +71,8 @@
 # For WSL
 # [credential]
 # 	helper = /mnt/c/Program\\ Files/Git/mingw64/bin/git-credential-manager-core.exe
+[credential]
+	helper = 
+	helper = /usr/local/share/gcm-core/git-credential-manager
+[credential "https://dev.azure.com"]
+	useHttpPath = true

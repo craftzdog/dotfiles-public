@@ -1,0 +1,51 @@
+# Configuration for Alacritty, the GPU enhanced terminal emulator.
+
+# Import additional configuration files
+#
+# Imports are loaded in order, skipping all missing files, with the importing
+# file being loaded last. If a field is already present in a previous import, it
+# will be replaced.
+#
+# All imports must either be absolute paths starting with `/`, or paths relative
+# to the user's home directory starting with `~/`.
+import:
+  - ~/.config/alacritty/themes/themes/nord.yaml
+
+env:
+  TERM: xterm-256color
+
+window:
+  padding:
+    x: 10
+    y: 10
+  class:
+    instance: Alacritty
+    general: Alacritty
+  decorations: buttonless
+  opacity: 0.9
+
+# Font configuration
+font:
+  normal:
+    family: JetBrainsMono NF
+    style: Regular
+  bold:
+    family: JetBrainsMono NF
+    style: Bold
+  italic:
+    family: JetBrainsMono NF
+    style: Italic
+  bold_italic:
+    family: JetBrainsMono NF
+    style: Bold Italic
+  # Point size
+  size: 16.0
+
+draw_bold_text_with_bright_colors: true
+
+scrolling:
+  history: 10000
+  multiplier: 3
+
+# Live config reload (changes require restart)
+live_config_reload: true
