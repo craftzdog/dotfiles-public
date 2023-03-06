@@ -68,11 +68,9 @@
 	process = git-lfs filter-process
 [ghq]
   root = ~/.ghq
-# For WSL
-# [credential]
-# 	helper = /mnt/c/Program\\ Files/Git/mingw64/bin/git-credential-manager-core.exe
+  # On windows
+  # root = D:/repos
 [credential]
-	helper = 
 	helper = /usr/local/share/gcm-core/git-credential-manager
-[credential "https://dev.azure.com"]
-	useHttpPath = true
+  # Fow wsl2
+	# helper = /mnt/c/Program\\ Files/Git/mingw64/bin/git-credential-manager.exe
