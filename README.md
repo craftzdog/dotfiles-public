@@ -48,7 +48,6 @@ Requires [Neovim](https://neovim.io/) (>= 0.8)
 
 - [Starship](https://starship.rs) - The minimal, blazing-fast, and infinitely customizable prompt for any shell
 - [Nerd fonts](https://github.com/ryanoasis/nerd-fonts) - Powerline-patched fonts. I use [JetBrains Mono](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/JetBrainsMono)
-- [Exa](https://the.exa.website/) - `ls` replacement
 - [Zoxide](https://github.com/ajeetdsouza/zoxide) -  A smarter `cd` command, inspired by `z` and `autojump`
 - [Fzf](https://github.com/junegunn/fzf) - A general-purpose command-line fuzzy finde
 - [Delta](https://github.com/dandavison/delta) - A syntax-highlighting pager for git, diff, and grep output 
@@ -60,6 +59,7 @@ Requires [Neovim](https://neovim.io/) (>= 0.8)
 - [Alacritty](https://alacritty.org) - A fast, cross-platform, OpenGL terminal emulator
 - [Zsh shell](https://zsh.sourceforge.io) - A shell designed for interactive use
 - [Oh my zsh](https://ohmyz.sh) - An open source, community-driven framework for managing your zsh configuration
+- [Exa](https://the.exa.website/) - A modern `ls` replacement
 
 ### For PowerShell on Windows
 
