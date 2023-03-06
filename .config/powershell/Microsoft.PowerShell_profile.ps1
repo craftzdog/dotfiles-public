@@ -28,11 +28,21 @@ Set-Alias -Name vim -Value nvim
 Set-Alias ll ls
 Set-Alias g git
 Set-Alias grep findstr
-Set-Alias tig 'C:\Program Files\Git\usr\bin\tig.exe'
-Set-Alias less 'C:\Program Files\Git\usr\bin\less.exe'
+Set-Alias tig "C:\Program Files\Git\usr\bin\tig.exe"
+Set-Alias less "C:\Program Files\Git\usr\bin\less.exe"
 
 # Utilities
 function which ($command) {
   Get-Command -Name $command -ErrorAction SilentlyContinue |
     Select-Object -ExpandProperty Path -ErrorAction SilentlyContinue
 }
+
+function ln ($link, $target) {
+  New-Item -ItemType SymbolicLink -Path $link -Target $target
+}
+
+function peco_src() {
+  ghq.exe look $(ghq list | peco.exe)
+}
+
+Set-PSReadlineKeyHandler -Chord Ctrl+] -ScriptBlock { peco_src }
