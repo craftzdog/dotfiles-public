@@ -42,7 +42,11 @@ function ln ($link, $target) {
 }
 
 function peco_src() {
-  ghq.exe look $(ghq list | peco.exe)
+  cd $(ghq list -p | peco)
 }
 
-Set-PSReadlineKeyHandler -Chord Ctrl+] -ScriptBlock { peco_src }
+Set-PSReadLineKeyHandler -Chord Ctrl+] -ScriptBlock {
+    [Microsoft.PowerShell.PSConsoleReadLine]::RevertLine()
+    [Microsoft.PowerShell.PSConsoleReadLine]::Insert("peco_src")
+    [Microsoft.PowerShell.PSConsoleReadLine]::AcceptLine()
+}
