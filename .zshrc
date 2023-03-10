@@ -76,9 +76,9 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-# export MANPATH="/usr/local/man:$MANPATH"
-# export PATH="/opt/homebrew/bin:$PATH"
-# export PATH="~/.local/bin:$PATH"
+# export MANPATH=/usr/local/man:$MANPATH
+# export PATH=/opt/homebrew/bin:$PATH
+# export PATH=~/.local/bin:$PATH
 # export DOCKER_HOST="unix:///run/user/1001/docker.sock"
 
 # You may need to manually set your language environment
@@ -109,5 +109,7 @@ alias lla="ll -a -g"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+# Eval enviroments
+# eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"
