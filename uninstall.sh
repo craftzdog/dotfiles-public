@@ -2,7 +2,7 @@
 
 set -e
 
-file_list = "~/.zshrc \
+file_list="~/.zshrc \
     ~/.oh-my-zsh/custom/peco.zsh \
     ~/.giconfig \
     ~/.config/nvim \
