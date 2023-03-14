@@ -18,15 +18,14 @@ check_package exa
 #Check whether zoxide is installed
 check_package zoxide
 
-ln -s ~/.zshrc ~/.dotfiles/.zshrc
-ln -s ~/.oh-my-zsh/custom/peco.zsh ~/.oh-my-zsh/custom/peco.zsh
-
-ln -s ~/.gitconfig ~/.gitconfig
-
-ln -s ~/.config/nvim ~/.config/nvim
-ln -s ~/.config/tmux ~/.config/tmux
-
-ln -s ~/.ssh/config ~/.ssh/config
+echo "Linking dotfiles..."
+ln -s ~/.dotfiles/.zshrc ~/.zshrc
+ln -s ~/.dotfile/.oh-my-zsh/custom/peco.zsh ~/.oh-my-zsh/custom/peco.zsh
+ln -s ~/.dotfiles/.gitconfig ~/.gitconfig
+ln -s ~/.dotfiles/.config/nvim ~/.config/nvim
+ln -s ~/.dotfiles/.config/tmux ~/.config/tmux
+ln -s ~/.dotfiles/.ssh/config ~/.ssh/config
+echo "Done!"
 
 check_package starship
 starship preset nerd-font-symbols > ~/.config/starship.toml
