@@ -49,13 +49,6 @@ packer.startup(function(use)
   -- use 'github/copilot.vim'
 
   use 'lewis6991/gitsigns.nvim'
-  use 'dinhhuy258/git.nvim' -- For git blame & browse
-
-  use {
-    'nvim-tree/nvim-tree.lua',
-    requires = {
-      'nvim-tree/nvim-web-devicons'
-    },
-    tag = 'nightly'
-  }
+  use 'dinhhuy258/git.nvim'    -- For git blame & browse
+  use 'glepnir/dashboard.nvim' -- LSP UIs
 end)
