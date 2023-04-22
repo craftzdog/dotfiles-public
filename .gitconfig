@@ -57,7 +57,7 @@
   tool = nvimdiff
 [difftool "nvimdiff"]
 	cmd = nvim -d \"$LOCAL\" \"$REMOTE\"
-	path = 
+	path =
 [mergetool "nvimdiff"]
 	cmd = nvim -d \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
@@ -71,6 +71,6 @@
   # On windows
   # root = D:/repos
 [credential]
-	helper = /usr/local/share/gcm-core/git-credential-manager
+	# helper = /usr/local/share/gcm-core/git-credential-manager
   # Fow wsl2
 	# helper = /mnt/c/Program\\ Files/Git/mingw64/bin/git-credential-manager.exe
