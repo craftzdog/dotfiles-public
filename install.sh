@@ -9,9 +9,11 @@ check_package() {
 }
 
 check_package curl
-# Install oh-my-zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-rm -rf ~/.zshrc
+if [ ! -f "~/.oh-my-zsh" ]; then
+    # Install oh-my-zsh
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+    rm -rf ~/.zshrc
+fi
 
 #Check whether exa is installed
 check_package exa
