@@ -106,6 +106,7 @@ alias cat="bat -pp --theme='Nord'"
 alias ls="exa --color auto --icons"
 alias ll="exa -l --color always --icons"
 alias lla="ll -a -g"
+alias vim="nvim"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
