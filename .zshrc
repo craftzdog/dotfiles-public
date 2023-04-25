@@ -76,8 +76,12 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
+# Initialize Homebrew
+# eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+# eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# Add environment variables
 # export MANPATH=/usr/local/man:$MANPATH
-# export PATH=/opt/homebrew/bin:$PATH
 # export PATH=~/.local/bin:$PATH
 # export DOCKER_HOST="unix:///run/user/1001/docker.sock"
 
@@ -108,9 +112,7 @@ alias ll="exa -l --color always --icons"
 alias lla="ll -a -g"
 alias vim="nvim"
 
+# Initialize fzf, zoxide and starship
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-# Eval enviroments
-# eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"
