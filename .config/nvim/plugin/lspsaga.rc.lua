@@ -23,9 +23,4 @@ vim.keymap.set('n', 'gp', '<Cmd>Lspsaga peek_definition<CR>', opts)
 vim.keymap.set('n', 'gr', '<Cmd>Lspsaga rename<CR>', opts)
 
 -- code action
-local codeaction = require("lspsaga.codeaction")
-vim.keymap.set("n", "<leader>ca", function() codeaction:code_action() end, { silent = true })
-vim.keymap.set("v", "<leader>ca", function()
-  vim.fn.feedkeys(vim.api.nvim_replace_termcodes("<C-U>", true, false, true))
-  codeaction:range_code_action()
-end, { silent = true })
+vim.keymap.set({ "n", "v" }, "<leader>ca", "<cmd>Lspsaga code_action<CR>")
