@@ -106,11 +106,22 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="vim ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias cat="bat -pp --theme='Nord'"
+# alias cat="bat -pp --theme='Nord'"
 alias ls="exa --color auto --icons"
 alias ll="exa -l --color always --icons"
 alias lla="ll -a -g"
 alias vim="nvim"
+
+# ssh-agent autorun
+if [ -z "$SSH_AUTH_SOCK" ]; then
+   # Check for a currently running instance of the agent
+   RUNNING_AGENT="`ps -ax | grep 'ssh-agent -s' | grep -v grep | wc -l | tr -d '[:space:]'`"
+   if [ "$RUNNING_AGENT" = "0" ]; then
+        # Launch a new instance of the agent
+        ssh-agent -s &> $HOME/.ssh/ssh-agent
+   fi
+   eval `cat $HOME/.ssh/ssh-agent`
+fi
 
 # Initialize fzf, zoxide and starship
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
