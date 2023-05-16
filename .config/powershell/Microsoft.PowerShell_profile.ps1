@@ -22,6 +22,7 @@ Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+f' -PSReadlineChordReverseHistory
 
 # Env
 $env:GIT_SSH = "C:\Windows\system32\OpenSSH\ssh.exe"
+ssh-add $HOME\.ssh\id_ed25519
 
 # Alias
 Set-Alias -Name vim -Value nvim
