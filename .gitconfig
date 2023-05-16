@@ -68,12 +68,12 @@
 [ghq]
   # root = ~/.ghq
   # On windows
-  root = D:/repos
+  # root = D:/repos
 [credential]
   # credentialStore = gpg
 	# helper = /usr/local/share/gcm-core/git-credential-manager
   # Fow wsl2
-	helper = /mnt/c/Program\\ Files/Git/mingw64/bin/git-credential-manager.exe
+	# helper = /mnt/c/Program\\ Files/Git/mingw64/bin/git-credential-manager.exe
 [url "git@github.com:"]
 	insteadOf = https://github.com/
 [credential "https://git.overleaf.com"]
