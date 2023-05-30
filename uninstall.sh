@@ -4,7 +4,7 @@ set -e
 
 file_list="$HOME/.zshrc \
     $HOME/.oh-my-zsh/custom/peco.zsh \
-    $HOME/.giconfig \
+    $HOME/.gitconfig \
     $HOME/.config/nvim \
     $HOME/.config/tmux \
     $HOME/.ssh/config"
