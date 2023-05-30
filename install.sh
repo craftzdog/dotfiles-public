@@ -8,6 +8,7 @@ check_package() {
     fi
 }
 
+# Check whether curl is installed
 check_package curl
 if [ ! -f "~/.oh-my-zsh" ]; then
     # Install oh-my-zsh
@@ -15,19 +16,19 @@ if [ ! -f "~/.oh-my-zsh" ]; then
     rm -rf ~/.zshrc
 fi
 
-#Check whether exa is installed
+# Check whether exa is installed
 check_package exa
-#Check whether zoxide is installed
+# Check whether zoxide is installed
 check_package zoxide
+# Check whether starship is installed
+check_package starship
 
 echo "Linking dotfiles..."
-ln -s ~/.dotfiles/.zshrc ~/.zshrc
-ln -s ~/.dotfile/.oh-my-zsh/custom/peco.zsh ~/.oh-my-zsh/custom/peco.zsh
-ln -s ~/.dotfiles/.gitconfig ~/.gitconfig
-ln -s ~/.dotfiles/.config/nvim ~/.config/nvim
-ln -s ~/.dotfiles/.config/tmux ~/.config/tmux
-ln -s ~/.dotfiles/.ssh/config ~/.ssh/config
+DOTFILES_DIR="$(pwd)"
+ln -s ${DOTFILES_DIR}/.zshrc $HOME/.zshrc
+ln -s ${DOTFILES_DIR}/.oh-my-zsh/custom/peco.zsh $HOME/.oh-my-zsh/custom/peco.zsh
+ln -s ${DOTFILES_DIR}/.gitconfig $HOME/.gitconfig
+ln -s ${DOTFILES_DIR}/.config/nvim $HOME/.config/nvim
+ln -s ${DOTFILES_DIR}/.config/tmux $HOME/.config/tmux
+ln -s ${DOTFILES_DIR}/.ssh/config $HOME/.ssh/config
 echo "Done!"
-
-check_package starship
-starship preset nerd-font-symbols > ~/.config/starship.toml
