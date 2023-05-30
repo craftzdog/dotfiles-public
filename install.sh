@@ -13,7 +13,7 @@ check_package curl
 if [ ! -f "$HOME/.oh-my-zsh" ]; then
     # Install oh-my-zsh
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-    rm -rf ~/.zshrc
+    rm -rf $HOME/.zshrc
 fi
 
 # Check whether exa is installed
