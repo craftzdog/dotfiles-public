@@ -1,7 +1,6 @@
 function fish_user_key_bindings
-  # peco
-  bind \cr peco_select_history # Bind for peco select history to Ctrl+R
-  bind \cf peco_change_directory # Bind for peco change directory to Ctrl+F
+  # fzf
+  bind \cf fzf_change_directory
 
   # vim-like
   bind \cl forward-char
@@ -9,3 +8,6 @@ function fish_user_key_bindings
   # prevent iterm2 from closing when typing Ctrl-D (EOF)
   bind \cd delete-char
 end
+
+# fzf plugin
+fzf_configure_bindings --directory=\co

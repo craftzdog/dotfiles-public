@@ -59,7 +59,7 @@ Requires [Neovim](https://neovim.io/) (>= 0.8)
 - [z for fish](https://github.com/jethrokuan/z) - Directory jumping
 - [Exa](https://the.exa.website/) - `ls` replacement
 - [ghq](https://github.com/x-motemen/ghq) - Local Git repository organizer
-- [peco](https://github.com/peco/peco) - Interactive filtering
+- [fzf](https://github.com/PatrickF1/fzf.fish) - Interactive filtering
 
 ## PowerShell setup (Windows)
 
