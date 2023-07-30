@@ -9,7 +9,7 @@
 # All imports must either be absolute paths starting with `/`, or paths relative
 # to the user's home directory starting with `~/`.
 import:
-  - ~/.config/alacritty/themes/themes/github_dark_dimmed.yaml
+  - ~/.config/alacritty/themes/themes/github_dark_default.yaml
 
 env:
   TERM: xterm-256color
