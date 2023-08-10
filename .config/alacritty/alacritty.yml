@@ -23,6 +23,7 @@ window:
 
 dynamic_padding: true
 
+custom_cursor_colors: true
 # (Github Dark Dimmed) Colors for Alacritty
 colors:
   # Default colors
