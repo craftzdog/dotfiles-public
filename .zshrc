@@ -107,8 +107,8 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="vim ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 # alias cat="bat -pp --theme='Nord'"
-alias ls="exa --color auto --icons"
-alias ll="exa -l --color always --icons"
+alias ls="eza --color auto --icons"
+alias ll="eza -l --color always --icons"
 alias lla="ll -a -g"
 alias vim="nvim"
 
