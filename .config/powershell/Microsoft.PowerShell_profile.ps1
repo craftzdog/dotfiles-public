@@ -8,7 +8,7 @@ Invoke-Expression (& {
 })
 
 Import-Module posh-git
-Import-Module -Name Terminal-Icons
+# Import-Module -Name Terminal-Icons
 
 # PSReadLine
 Set-PSReadLineOption -EditMode Emacs
@@ -23,25 +23,17 @@ Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+f' -PSReadlineChordReverseHistory
 # Env
 $env:GIT_SSH = "C:\Windows\system32\OpenSSH\ssh.exe"
 
-# Alias
-Set-Alias -Name vim -Value nvim
-Set-Alias ll ls
-Set-Alias g git
-Set-Alias grep findstr
-Set-Alias tig "C:\Program Files\Git\usr\bin\tig.exe"
-Set-Alias less "C:\Program Files\Git\usr\bin\less.exe"
-
 # Utilities
-function which ($command) {
+Function which ($command) {
   Get-Command -Name $command -ErrorAction SilentlyContinue |
     Select-Object -ExpandProperty Path -ErrorAction SilentlyContinue
 }
 
-function ln ($link, $target) {
+Function ln ($link, $target) {
   New-Item -ItemType SymbolicLink -Path $link -Target $target
 }
 
-function peco_src() {
+Function peco_src() {
   cd $(ghq list -p | peco)
 }
 
@@ -50,3 +42,20 @@ Set-PSReadLineKeyHandler -Chord Ctrl+] -ScriptBlock {
     [Microsoft.PowerShell.PSConsoleReadLine]::Insert("peco_src")
     [Microsoft.PowerShell.PSConsoleReadLine]::AcceptLine()
 }
+
+Function eza_ls {eza --color auto --icons}
+
+Function eza_ll {eza -l --color always --icons}
+
+Function eza_lla {eza -l -a -g --color always --icons }
+
+# Alias
+Set-Alias -Name vim -Value nvim
+Set-Alias g git
+Set-Alias grep findstr
+Set-Alias tig "C:\Program Files\Git\usr\bin\tig.exe"
+Set-Alias less "C:\Program Files\Git\usr\bin\less.exe"
+Set-Alias ls eza_ls
+Set-Alias ll eza_ll
+Set-Alias lla eza_lla
+Set-Alias vim nvim
