@@ -85,6 +85,6 @@ Watch my video tutorials:
 
 ## About me
 
-- [Twitter @inkdrop_app](https://twitter.com/inkdrop_app)
-- [Blog](https://blog.inkdrop.app/)
+- [@inkdrop_app on X](https://twitter.com/inkdrop_app)
+- [Newsletters](https://www.devas.life/)
 - [My product: Inkdrop - Markdown note-taking app](https://www.inkdrop.app/)
