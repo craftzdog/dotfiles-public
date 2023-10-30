@@ -3,21 +3,14 @@ require('craftzdog.highlights')
 require('craftzdog.maps')
 require('craftzdog.plugins')
 
-local has = vim.fn.has
-local is_mac = has "macunix"
-local is_linux = has "unix"
-local is_win = has "win32"
-local is_wsl = has "wsl"
+local os = vim.loop.os_uname().sysname
 
-if is_mac == 1 then
+if os == "Darwin" then
   require('craftzdog.macos')
-end
-if is_linux == 1 then
+elseif os == "Linux" then
   require('craftzdog.linux')
-end
-if is_win == 1 then
+elseif os == "Windows_NT" then
   require('craftzdog.windows')
-end
-if is_wsl == 1 then
-  require('craftzdog.wsl')
+else
+  error("Unknown OS")
 end
