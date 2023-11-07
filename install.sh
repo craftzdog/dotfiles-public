@@ -17,7 +17,7 @@ if [ ! -d "$HOME/.oh-my-zsh" ]; then
 fi
 
 # Check whether exa is installed
-check_package exa
+check_package eza
 # Check whether zoxide is installed
 check_package zoxide
 # Check whether starship is installed
