@@ -10,7 +10,7 @@
 # to the user's home directory starting with `~/`.
 
 import:
- - ~/.config/alacritty/themes/themes/github_dark_default.yaml
+ - ~/.config/alacritty/themes/themes/github_dark_dimmed.yaml
 
 env:
   TERM: xterm-256color
@@ -34,7 +34,7 @@ scrolling:
 # Font configuration
 font:
   normal:
-    family: JetBrainsMono Nerd Font
+    family: JetBRainsMono Nerd Font
     style: Regular
   bold:
     family: JetBrainsMono Nerd Font
