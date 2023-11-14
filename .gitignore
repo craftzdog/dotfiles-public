@@ -32,6 +32,7 @@ Session.vim
 .vim/ftdetect/Dockerfile.vim
 .vim/syntax/Dockerfile.vim
 .vim/snippets/
+.luarc.json
 
 # Xcode
 build/
