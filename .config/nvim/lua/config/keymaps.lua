@@ -6,7 +6,6 @@ local keymap = vim.keymap
 local opts = { noremap = true, silent = true }
 
 keymap.set("n", "x", '"_x')
-keymap.set("n", "c", '"_c"')
 
 -- Increment/decrement
 keymap.set("n", "+", "<C-a>")
