@@ -11,4 +11,4 @@ github_theme.setup({
 })
 
 -- setup must be called before loading
-vim.cmd('colorscheme github_dark_dimmed')
+vim.cmd('colorscheme github_dark')
