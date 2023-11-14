@@ -1,23 +1,10 @@
-require('craftzdog.base')
-require('craftzdog.highlights')
-require('craftzdog.maps')
-require('craftzdog.plugins')
+if vim.loader then
+	vim.loader.enable()
+end
 
-local has = vim.fn.has
-local is_mac = has "macunix"
-local is_linux = has "unix"
-local is_win = has "win32"
-local is_wsl = has "wsl"
+_G.dd = function(...)
+	require("util.debug").dump(...)
+end
+vim.print = _G.dd
 
-if is_mac == 1 then
-  require('craftzdog.macos')
-end
-if is_linux == 1 then
-  require('craftzdog.linux')
-end
-if is_win == 1 then
-  require('craftzdog.windows')
-end
-if is_wsl == 1 then
-  require('craftzdog.wsl')
-end
+require("config.lazy")
