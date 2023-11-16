@@ -32,7 +32,7 @@ Session.vim
 .vim/ftdetect/Dockerfile.vim
 .vim/syntax/Dockerfile.vim
 .vim/snippets/
-.config/nvim/plugin/packer_compiled.lua
+.luarc.json
 
 # Xcode
 build/
