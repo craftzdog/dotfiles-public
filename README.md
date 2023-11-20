@@ -49,7 +49,7 @@ This is the repo to store all my dotfiles and personal configs. It is forked and
 - [Alacritty](https://alacritty.org) - A fast, cross-platform, OpenGL terminal emulator
 - [Zsh shell](https://zsh.sourceforge.io) - A shell designed for interactive use
 - [Oh my zsh](https://ohmyz.sh) - An open source, community-driven framework for managing your zsh configuration
-- [Exa](https://the.exa.website/) - A modern `ls` replacement
+- [eza](https://github.com/eza-community/eza) - A modern `ls` replacement
 
 ### For PowerShell on Windows
 
