@@ -19,11 +19,8 @@ window:
   padding:
     x: 10
     y: 10
-  class:
-    instance: Alacritty
-    general: Alacritty
   decorations: buttonless
-  opacity: 0.85
+  opacity: 0.9
 
 dynamic_padding: true
 
@@ -47,10 +44,3 @@ font:
     style: Bold Italic
   # Point size
   size: 16.0
-
-draw_bold_text_with_bright_colors: true
-
-# Live config reload (changes require restart)
-live_config_reload: true
-
-custom_cursor_colors: true
