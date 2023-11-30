@@ -31,7 +31,7 @@ scrolling:
 # Font configuration
 font:
   normal:
-    family: JetBRainsMono Nerd Font
+    family: JetBrainsMono Nerd Font
     style: Regular
   bold:
     family: JetBrainsMono Nerd Font
