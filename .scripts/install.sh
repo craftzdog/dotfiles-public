@@ -60,14 +60,14 @@ select option in "Install Homebrew and packages" "Install Ubuntu packages" "Inst
 		move_config_folders
 		;;
 	"Run fish configuration script")
-		source ./fish.sh
+		./fish.sh
 		;;
 	"Run all macOS options")
 		check_brew
 		move_config_folders
 		install_brew_packages
 		install_npm_packages
-		source ./fish.sh
+		./fish.sh
 		;;
 	"Run all Ubuntu Options")
 		install_apt_packages
