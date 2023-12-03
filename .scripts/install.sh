@@ -31,7 +31,7 @@ function install_apt_packages() {
 
 function install_npm_packages() {
 	echo -e "${YELLOW} Installing npm packages ${NC}"
-	npm install -g commitizen cz-conventional-changelog
+	sudo npm install -g commitizen cz-conventional-changelog
 }
 
 function move_config_folders() {
@@ -44,7 +44,7 @@ echo -e "${YELLOW}Welcome to craftsdog setup installation script.${NC}"
 
 PS3="Select your option: "
 
-select option in "Install Homebrew and packages" "Install Ubuntu packages" "Move .config folders to home directory" "Run fish configuration script" "Run all macOS Options" "Run all Ubuntu Options" "Quit"; do
+select option in "Install Homebrew and packages" "Install Ubuntu packages" "Install npm packages" "Move .config folders to home directory" "Run fish configuration script" "Run all macOS Options" "Run all Ubuntu Options" "Quit"; do
 	case $option in
 	"Install Homebrew and packages")
 		check_brew
@@ -52,6 +52,9 @@ select option in "Install Homebrew and packages" "Install Ubuntu packages" "Move
 		;;
 	"Install Ubuntu packages")
 		install_apt_packages
+		;;
+	"Install npm packages")
+		install_npm_packages
 		;;
 	"Move .config folders to home directory")
 		move_config_folders
@@ -63,6 +66,7 @@ select option in "Install Homebrew and packages" "Install Ubuntu packages" "Move
 		check_brew
 		move_config_folders
 		install_brew_packages
+		install_npm_packages
 		source ./fish.sh
 		;;
 	"Run all Ubuntu Options")
