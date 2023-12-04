@@ -44,36 +44,36 @@ echo -e "${YELLOW}Welcome to craftsdog setup installation script.${NC}"
 
 PS3="Select your option: "
 
-select option in "Install Homebrew and packages" "Install Ubuntu packages" "Install npm packages" "Move .config folders to home directory" "Run fish configuration script" "Run all macOS Options" "Run all Ubuntu Options" "Quit"; do
+select option in "Install Homebrew and packages 📦" "Install Ubuntu packages 📦" "Install npm packages 📦" "Move .config folders to home directory ⬅️" "Run fish configuration script 🐟" "Commando Mode (macOS) 💪" "Commando Mode (Ubuntu) 💪" "Quit ❌"; do
 	case $option in
-	"Install Homebrew and packages")
+	"Install Homebrew and packages 📦")
 		check_brew
 		install_brew_packages
 		;;
-	"Install Ubuntu packages")
+	"Install Ubuntu packages 📦")
 		install_apt_packages
 		;;
-	"Install npm packages")
+	"Install npm packages 📦")
 		install_npm_packages
 		;;
-	"Move .config folders to home directory")
+	"Move .config folders to home directory ⬅️")
 		move_config_folders
 		;;
-	"Run fish configuration script")
+	"Run fish configuration scrip 🐟")
 		./fish.sh
 		;;
-	"Run all macOS options")
+	"Commando Mode (macOS) 💪")
 		check_brew
 		move_config_folders
 		install_brew_packages
 		install_npm_packages
 		./fish.sh
 		;;
-	"Run all Ubuntu Options")
+	"Commando Mode (Ubuntu) 💪")
 		install_apt_packages
 		move_config_folders
 		;;
-	"Quit")
+	"Quit ❌")
 		echo -e "${GREEN}We're done${NC}"
 		break
 		;;
