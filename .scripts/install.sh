@@ -17,7 +17,7 @@ function check_brew() {
 
 function install_brew_packages() {
 	echo -e "${YELLOW} Installing homebrew packages ${NC}"
-	brew install fish ghq pyenv jq neovim node eza bat hub tmux ripgrep fd fzf watchman
+	brew bundle install --file=./brewfile
 }
 
 function install_apt_packages() {
