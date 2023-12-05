@@ -74,6 +74,7 @@ select option in "Install Homebrew and packages 🍺" "Install Ubuntu packages �
 	"Commando Mode (Ubuntu) 💪")
 		install_apt_packages
 		move_config_folders
+		./fish.sh
 		;;
 	"Quit ❌")
 		echo -e "${GREEN}We're done${NC}"
