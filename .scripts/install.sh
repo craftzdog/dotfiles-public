@@ -36,7 +36,9 @@ function install_npm_packages() {
 
 function move_config_folders() {
 	echo -e "${YELLOW} Moving .config folders to home directory ${NC}"
-	cp -r ../.config ~/
+	cp -r ../.config/fish ~/.config/
+	cp -r ../.config/nvim ~/.config/
+	cp -r ../.config/tmux ~/.config/
 	echo -e "${GREEN} Files are safely moved to home directory${NC}"
 }
 
