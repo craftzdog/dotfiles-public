@@ -96,7 +96,7 @@ return {
 		opts = {
 			options = {
 				-- globalstatus = false,
-				theme = "github_dark",
+				theme = "github_dark_default",
 			},
 		},
 	},
