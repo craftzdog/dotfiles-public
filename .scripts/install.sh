@@ -60,7 +60,7 @@ select option in "Install Homebrew and packages 🍺" "Install Ubuntu packages �
 	"Move .config folders to home directory ⬅️")
 		move_config_folders
 		;;
-	"Run fish configuration scrip 🐟")
+	"Run fish configuration script 🐟")
 		./fish.sh
 		;;
 	"Commando Mode (macOS) 💪")
