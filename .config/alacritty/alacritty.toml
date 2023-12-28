@@ -1,4 +1,3 @@
-dynamic_padding = true
 import = ["/Users/zheng/.config/alacritty/themes/themes/github_dark_default.toml"]
 
 [env]
