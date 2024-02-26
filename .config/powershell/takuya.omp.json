@@ -89,7 +89,7 @@
           "background": "#40c4ff",
           "foreground": "#ffffff",
           "properties": {
-            "prefix": " \uf5ef ",
+            "prefix": " \udb80\udcf0 ",
             "postfix": " "
         }
         }
