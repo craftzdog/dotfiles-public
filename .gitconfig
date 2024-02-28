@@ -2,7 +2,6 @@
   pager = delta
 	excludesfile = ~/.gitignore
 	ignorecase = false
-	editor = \"C:\\Users\\Zheng\\AppData\\Local\\Programs\\Microsoft VS Code\\bin\\code\" --wait
 [delta]
   side-by-side = true
   line-numbers-left-format = ""
@@ -76,5 +75,3 @@
 	# helper = /usr/local/share/gcm-core/git-credential-manager
   # Fow wsl2
 	# helper = /mnt/c/Program\\ Files/Git/mingw64/bin/git-credential-manager.exe
-[credential "https://git.overleaf.com"]
-	provider = generic
