@@ -50,7 +50,6 @@ Function eza_ll {eza -l --color always --icons}
 Function eza_lla {eza -l -a -g --color always --icons }
 
 # Alias
-Set-Alias -Name vim -Value nvim
 Set-Alias g git
 Set-Alias grep findstr
 Set-Alias tig "C:\Program Files\Git\usr\bin\tig.exe"
