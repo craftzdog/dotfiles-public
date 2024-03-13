@@ -5,3 +5,5 @@ end
 
 # Initial starship
 starship init fish | source
+# Initial zoxide
+zoxide init fish | source

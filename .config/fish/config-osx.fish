@@ -11,3 +11,5 @@ set -g FZF_LEGACY_KEYBINDINGS 0
 
 # Initial starship
 starship init fish | source
+# Initial zoxide
+zoxide init fish | source
