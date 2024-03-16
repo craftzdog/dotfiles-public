@@ -36,3 +36,8 @@ set LOCAL_CONFIG (dirname (status --current-filename))/config-local.fish
 if test -f $LOCAL_CONFIG
   source $LOCAL_CONFIG
 end
+
+# Initial starship
+starship init fish | source
+# Initial zoxide
+zoxide init fish | source
