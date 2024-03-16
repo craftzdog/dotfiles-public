@@ -1,3 +1,13 @@
+# folders
+.config/fish/completions
+.config/fish/conf.d
+.config/nvim/plugin
+fisher*
+fzf_configure*
+fish_*
+lazy*
+_*
+
 *.o
 \#*#
 *#
