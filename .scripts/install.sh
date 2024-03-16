@@ -29,6 +29,11 @@ function install_apt_packages() {
 	fi
 }
 
+function install_fish_plugins() {
+	echo -e "${YELLOW} Installing apt packages ${NC}"
+	fisher install $_fisher_plugins
+}
+
 function install_npm_packages() {
 	echo -e "${YELLOW} Installing npm packages ${NC}"
 	sudo npm install -g commitizen cz-conventional-changelog
@@ -45,7 +50,7 @@ echo -e "${YELLOW}Welcome to craftsdog setup installation script.${NC}"
 
 PS3="Select your option: "
 
-select option in "Install Homebrew and packages 🍺" "Install Ubuntu packages 📦" "Install npm packages 📦" "Move .config folders to home directory ⬅️" "Run fish configuration script 🐟" "Commando Mode (macOS) 💪" "Commando Mode (Ubuntu) 💪" "Quit ❌"; do
+select option in "Install Homebrew and packages 🍺" "Install Ubuntu packages 📦" "Install npm packages 📦" "Move .config folders to home directory ⬅️" "Create Fish Setup Links 🐟" "Install Fish Plugins 🐟" "Commando Mode (macOS) 💪" "Commando Mode (Ubuntu) 💪" "Quit ❌"; do
 	case $option in
 	"Install Homebrew and packages 🍺")
 		check_brew
@@ -60,8 +65,11 @@ select option in "Install Homebrew and packages 🍺" "Install Ubuntu packages �
 	"Move .config folders to home directory ⬅️")
 		move_config_folders
 		;;
-	"Run fish configuration script 🐟")
+	"Create Fish Setup Links 🐟")
 		./fish.sh
+		;;
+	"Install Fish Plugins 🐟")
+		install_fish_plugins
 		;;
 	"Commando Mode (macOS) 💪")
 		check_brew
