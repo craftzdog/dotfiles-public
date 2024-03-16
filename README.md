@@ -36,29 +36,23 @@ This is the repo to store all my dotfiles and personal configs. It is forked and
 
 ## Shell setup (Linux & macOS & Windows)
 
-- [Starship](https://starship.rs) - The minimal, blazing-fast, and infinitely customizable prompt for any shell
-- [Nerd fonts](https://github.com/ryanoasis/nerd-fonts) - Powerline-patched fonts. I use [JetBrains Mono](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/JetBrainsMono)
-- [Zoxide](https://github.com/ajeetdsouza/zoxide) -  A smarter `cd` command, inspired by `z` and `autojump`
-- [Fzf](https://github.com/junegunn/fzf) - A general-purpose command-line fuzzy finde
-- [Delta](https://github.com/dandavison/delta) - A syntax-highlighting pager for git, diff, and grep output 
-- [Ghq](https://github.com/x-motemen/ghq) - Local git repository organizer
-- [Peco](https://github.com/peco/peco) - Interactive filtering
+- [starship](https://starship.rs) - The minimal, blazing-fast, and infinitely customizable prompt for any shell
+- [nerd fonts](https://github.com/ryanoasis/nerd-fonts) - Powerline-patched fonts. I use [JetBrains Mono](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/JetBrainsMono)
+- [eza](https://github.com/eza-community/eza) - A modern `ls` replacement
+- [zoxide](https://github.com/ajeetdsouza/zoxide) -  A smarter `cd` command, inspired by `z` and `autojump`
+- [ghq](https://github.com/x-motemen/ghq) - Local git repository organizer
 
 ### For Linux & macOS
 
-- [Alacritty](https://alacritty.org) - A fast, cross-platform, OpenGL terminal emulator
-- [Zsh shell](https://zsh.sourceforge.io) - A shell designed for interactive use
-- [Oh my zsh](https://ohmyz.sh) - An open source, community-driven framework for managing your zsh configuration
-- [eza](https://github.com/eza-community/eza) - A modern `ls` replacement
+- [alacritty](https://alacritty.org) - A fast, cross-platform, OpenGL terminal emulator
+- [fish](https://fishshell.com/) - A smart and user-friendly command line shell for Linux, macOS, and the rest of the family
+- [fzf.fish](https://github.com/PatrickF1/fzf.fish) - Augment your fish with mnemonic key bindings to efficiently find what you need using fzf
+- [delta](https://github.com/dandavison/delta) - A syntax-highlighting pager for git, diff, and grep output 
 
 ### For PowerShell on Windows
 
 - [Winget](https://github.com/microsoft/winget-cli) - Windows Package Manager Client
-- [Scoop](https://scoop.sh/) - A command-line installer
-- [Terminal Icons](https://github.com/devblackops/Terminal-Icons) - Folder and file icons
 - [Git for Windows](https://gitforwindows.org/) - Git for Windows
-- [PSFzf](https://github.com/kelleyma49/PSFzf) - Fuzzy finder
-- [PSReadLine](https://docs.microsoft.com/en-us/powershell/module/psreadline/) - Cmdlets for customizing the editing environment, used for autocompletion
 
 <!-- ## How to use
 
