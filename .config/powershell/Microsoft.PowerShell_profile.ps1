@@ -46,6 +46,8 @@ Set-Alias ls eza_ls
 Set-Alias ll eza_ll
 Set-Alias lla eza_lla
 Set-Alias vim nvim
+Set-Alias code code-insiders
+
 
 Invoke-Expression (&starship init powershell)
 Invoke-Expression (& { (zoxide init powershell | Out-String) })
