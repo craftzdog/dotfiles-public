@@ -35,17 +35,17 @@ function install_npm_packages() {
 }
 
 function move_config_folders() {
-	echo -e "${YELLOW} Moving .config folders to home directory ${NC}"
+	echo -e "${YELLOW} Moving .config folders to user config directory ${NC}"
 	cp -r ../.config/nvim ~/.config/
 	cp -r ../.config/tmux ~/.config/
-	echo -e "${GREEN} Files are safely moved to home directory${NC}"
+	echo -e "${GREEN} Files are safely moved to user config directory${NC}"
 }
 
 echo -e "${YELLOW}Welcome to craftsdog setup installation script.${NC}"
 
 PS3="Select your option: "
 
-select option in "Install Homebrew and packages 🍺" "Install Ubuntu packages 📦" "Install npm packages 📦" "Move .config folders to home directory ⬅️" "Run fish configuration script 🐟" "Commando Mode (macOS) 💪" "Commando Mode (Ubuntu) 💪" "Quit ❌"; do
+select option in "Install Homebrew and packages 🍺" "Install Ubuntu packages 📦" "Install npm packages 📦" "Move .config folders to user config directory ⬅️" "Run fish configuration script 🐟" "Commando Mode (macOS) 💪" "Commando Mode (Ubuntu) 💪" "Quit ❌"; do
 	case $option in
 	"Install Homebrew and packages 🍺")
 		check_brew
@@ -57,7 +57,7 @@ select option in "Install Homebrew and packages 🍺" "Install Ubuntu packages �
 	"Install npm packages 📦")
 		install_npm_packages
 		;;
-	"Move .config folders to home directory ⬅️")
+	"Move .config folders to user config directory ⬅️")
 		move_config_folders
 		;;
 	"Run fish configuration script 🐟")
