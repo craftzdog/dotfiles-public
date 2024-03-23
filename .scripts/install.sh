@@ -62,19 +62,19 @@ select option in "Install Homebrew and packages 🍺" "Install Ubuntu packages �
 		move_config_folders
 		;;
 	"Run fish configuration script 🐟")
-		./fish.sh
+        $(~/.dotfiles/.scripts/fish.sh)
 		;;
 	"Commando Mode (macOS) 💪")
 		check_brew
 		move_config_folders
 		install_brew_packages
 		install_npm_packages
-		./fish.sh
+        $(~/.dotfiles/.scripts/fish.sh)
 		;;
 	"Commando Mode (Ubuntu) 💪")
 		install_apt_packages
 		move_config_folders
-		./fish.sh
+        $(~/.dotfiles/.scripts/fish.sh)
 		;;
 	"Quit ❌")
 		echo -e "${GREEN}We're done${NC}"
