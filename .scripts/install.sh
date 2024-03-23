@@ -17,13 +17,14 @@ function check_brew() {
 
 function install_brew_packages() {
 	echo -e "${YELLOW} Installing homebrew packages ${NC}"
-	brew bundle install --file=./brewfile
+	ln -s "$HOME/.dotfiles/.scripts/Brewfile" "$HOME/Brewfile"
+	brew bundle install
 }
 
 function install_apt_packages() {
 	echo -e "${YELLOW} Installing apt packages ${NC}"
 	if command -v apt &>/dev/null; then
-		sudo apt install fish exa fzf fd-find ripgrep
+		sudo apt install fish eza fzf fd-find ripgrep
 	else
 		echo -e "${RED}You are not using ubuntu${NC}"
 	fi
