@@ -186,6 +186,15 @@ return {
 							-- your custom normal mode mappings
 							["N"] = fb_actions.create,
 							["h"] = fb_actions.goto_parent_dir,
+							["l"] = function()
+								local entry = require("telescope.actions.state").get_selected_entry()
+								local is_directory = vim.fn.isdirectory(entry.path) == 1
+								if is_directory then
+								  actions.select_tab_drop(vim.api.nvim_get_current_buf())
+								else
+								  actions.file_edit(vim.api.nvim_get_current_buf())
+								end
+							end,			 
 							["/"] = function()
 								vim.cmd("startinsert")
 							end,
