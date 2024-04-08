@@ -32,7 +32,7 @@ function install_apt_packages() {
 
 function install_npm_packages() {
 	echo -e "${YELLOW} Installing npm packages ${NC}"
-	sudo npm install -g commitizen cz-conventional-changelog
+	npm install -g commitizen cz-conventional-changelog
 }
 
 function move_config_folders() {
@@ -62,19 +62,19 @@ select option in "Install Homebrew and packages 🍺" "Install Ubuntu packages �
 		move_config_folders
 		;;
 	"Run fish configuration script 🐟")
-        $(~/.dotfiles/.scripts/fish.sh)
+		$(~/.dotfiles/.scripts/fish.sh)
 		;;
 	"Commando Mode (macOS) 💪")
 		check_brew
 		move_config_folders
 		install_brew_packages
 		install_npm_packages
-        $(~/.dotfiles/.scripts/fish.sh)
+		$(~/.dotfiles/.scripts/fish.sh)
 		;;
 	"Commando Mode (Ubuntu) 💪")
 		install_apt_packages
 		move_config_folders
-        $(~/.dotfiles/.scripts/fish.sh)
+		$(~/.dotfiles/.scripts/fish.sh)
 		;;
 	"Quit ❌")
 		echo -e "${GREEN}We're done${NC}"
