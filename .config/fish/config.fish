@@ -17,10 +17,6 @@ alias lla "ll -A"
 alias g git
 command -qv nvim && alias vim nvim
 
-if type -q code-insiders
-  alias code "code-insiders"
-end
-
 set -gx EDITOR nvim
 
 set -gx PATH bin $PATH
