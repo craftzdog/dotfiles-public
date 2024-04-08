@@ -24,7 +24,6 @@ function install_brew_packages() {
 function install_apt_packages() {
 	echo -e "${YELLOW} Installing apt packages ${NC}"
 	if command -v apt &>/dev/null; then
-		sudo apt install
 		sudo apt install $(grep -vE "^\s*#" apt-packages.txt | tr "\n" " ")
 	else
 		echo -e "${RED}You are not using ubuntu${NC}"
