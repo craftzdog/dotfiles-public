@@ -46,8 +46,10 @@ echo -e "${YELLOW}Welcome to craftsdog setup installation script.${NC}"
 
 PS3="Select your option: "
 
-select option in "Install Homebrew and packages 🍺" "Install Ubuntu packages 📦" "Install npm packages 📦" "Move .config folders to user config directory ⬅️" "Run fish configuration script 🐟" "Commando Mode (macOS) 💪" "Commando Mode (Ubuntu) 💪"; do
-	case $option in
+options=("Install Homebrew and packages 🍺" "Install Ubuntu packages 📦" "Install npm packages 📦" "Move .config folders to user config directory ⬅️" "Run fish configuration script 🐟" "Commando Mode (macOS) 💪" "Commando Mode (Ubuntu) 💪")
+
+select SELECTED_OPTION in "${options[@]}"; do
+	case "${SELECTED_OPTION}" in
 	"Install Homebrew and packages 🍺")
 		check_brew
 		install_brew_packages
