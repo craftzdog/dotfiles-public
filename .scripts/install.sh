@@ -68,7 +68,7 @@ select SELECTED_OPTION in "${options[@]}"; do
 		break
 		;;
 	"Run fish configuration script 🐟")
-		$(~/.dotfiles/.scripts/fish.sh)
+		~/.dotfiles/.scripts/fish.sh
 		break
 		;;
 	"Commando Mode (macOS) 💪")
@@ -76,13 +76,13 @@ select SELECTED_OPTION in "${options[@]}"; do
 		move_config_folders
 		install_brew_packages
 		install_npm_packages
-		$(~/.dotfiles/.scripts/fish.sh)
+		~/.dotfiles/.scripts/fish.sh
 		break
 		;;
 	"Commando Mode (Ubuntu) 💪")
 		install_apt_packages
 		move_config_folders
-		$(~/.dotfiles/.scripts/fish.sh)
+		~/.dotfiles/.scripts/fish.sh
 		break
 		;;
 	*)
