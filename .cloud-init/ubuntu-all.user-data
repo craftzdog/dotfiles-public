@@ -1,0 +1,146 @@
+#cloud-config
+users:
+  - name: zheng
+    gecos: Zheng Ma
+    groups: [adm,dialout,cdrom,floppy,sudo,audio,dip,video,plugdev,netdev,docker]
+    sudo: ALL=(ALL) NOPASSWD:ALL
+    shell: /bin/bash
+
+write_files:
+  - path: /etc/wsl.conf
+    append: true
+    content: |
+      [user]
+      default=zheng
+
+packages: 
+  - docker-ce
+  - docker-ce-cli
+  - containerd.io
+  - docker-buildx-plugin
+  - docker-compose-plugin
+  - nvidia-container-toolkit
+
+apt:
+  sources:
+    docker.list:
+      source: "deb [arch=amd64] https://download.docker.com/linux/ubuntu noble stable"
+      key: |
+        -----BEGIN PGP PUBLIC KEY BLOCK-----
+
+        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
+        YT90qFF93M3v01BbxP+EIY2/9tiIPbrd
+        =0YYh
+        -----END PGP PUBLIC KEY BLOCK-----
+    nvidia-container-toolkit.list:
+      source: "deb https://nvidia.github.io/libnvidia-container/stable/deb/$(ARCH) /"
+      key: |
+        -----BEGIN PGP PUBLIC KEY BLOCK-----
+
+        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
+        =9QWY
+        -----END PGP PUBLIC KEY BLOCK-----
+
