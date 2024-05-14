@@ -147,6 +147,3 @@ apt:
         FsEME5XNmBGdNEo2flRVFfpG1IWds2Ba3IsdbYd9nzmbBW7/n0InVRDrIg==
         =9QWY
         -----END PGP PUBLIC KEY BLOCK-----
-
-runcmd:
-  - curl -sS https://starship.rs/install.sh | sh
