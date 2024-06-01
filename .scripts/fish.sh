@@ -10,6 +10,7 @@ if test -d "$CONFIG_PATH"
   mkdir "$CONFIG_PATH/"
   mkdir "$CONFIG_PATH/functions/"
   mkdir "$CONFIG_PATH/conf.d/"
+  mkdir "$CONFIG_PATH/completions/"
 end
 
 echo "Copying files to config path"
@@ -20,6 +21,7 @@ ln -s "$BASE_DIR/config-linux.fish" "$CONFIG_PATH"
 ln -s "$BASE_DIR/functions/fzf_change_directory.fish" "$CONFIG_PATH/functions/"
 ln -s "$BASE_DIR/functions/fish_user_key_bindings.fish" "$CONFIG_PATH/functions/"
 ln -s "$BASE_DIR/conf.d/tide.fish" "$CONFIG_PATH/conf.d/"
+ln -s "$BASE_DIR/completions/gh.fish" "$CONFIG_PATH/completions/"
 
 echo "Installing fisher..."
 curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher
