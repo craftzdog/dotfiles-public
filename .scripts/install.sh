@@ -48,11 +48,61 @@ function install_npm_packages() {
 	check_command_execution "npm packages"
 }
 
-function move_config_folders() {
-	echo -e "${YELLOW} Moving .config folders to user config directory ${NC}"
-	cp -r ../.config/nvim ~/.config/
-	cp -r ../.config/tmux ~/.config/
-	echo -e "${GREEN} Files are safely moved to user config directory${NC}"
+function move_config_folders_and_dotfiles() {
+	echo -e "${YELLOW} Moving .config folders and dotfiles to user config directory ${NC}"
+
+	# Neovim
+	if [ -e ~/.config/nvim ]; then
+		echo -e "${RED}Removing older neovim config ${NC}"
+		rm -rf ~/.config/nvim/
+		echo -e "${YELLOW}Copying neovim directory to home directory${NC}"
+		cp -r ~/.dotfiles/.config/nvim ~/.config/
+		echo -e "${GREEN}Successfully copied neovim to home directory"
+	else
+		echo -e "${YELLOW}Copying neovim directory to home directory${NC}"
+		cp -r ~/.dotfiles/.config/nvim ~/.config/
+		echo -e "${GREEN}Successfully copied neovim to home directory"
+	fi
+
+	# Tmux
+	if [ -e ~/.config/tmux ]; then
+		echo -e "${RED}Removing older tmux config ${NC}"
+		rm -rf ~/.config/tmux/
+		echo -e "${YELLOW}Copying tmux directory to home directory${NC}"
+		cp -r ~/.dotfiles/.config/tmux ~/.config/
+		echo -e "${GREEN}Successfully copied tmux to home directory"
+	else
+		echo -e "${YELLOW}Copying tmux directory to home directory${NC}"
+		cp -r ~/.dotfiles/.config/tmux ~/.config/
+		echo -e "${GREEN}Successfully copied tmux to home directory"
+	fi
+
+	# Lazygit
+	if [ -e ~/.config/lazygit ]; then
+		echo -e "${RED}Removing older lazygit config ${NC}"
+		rm -rf ~/.config/lazygit/
+		echo -e "${YELLOW}Copying lazygit directory to home directory${NC}"
+		cp -r ~/.dotfiles/.config/lazygit ~/.config/
+		echo -e "${GREEN}Successfully copied lazygit to home directory"
+	else
+		echo -e "${YELLOW}Copying lazygit directory to home directory${NC}"
+		cp -r ~/.dotfiles/.config/lazygit ~/.config/
+		echo -e "${GREEN}Successfully copied lazygit to home directory"
+	fi
+
+	# czrc
+	if [ -e ~/.config/.czrc ]; then
+		echo -e "${RED}Removing older .czrc config ${NC}"
+		rm -rf ~/.config/.czrc/
+		echo -e "${YELLOW}Copying .czrc directory to home directory${NC}"
+		cp -r ~/.dotfiles/.config/.czrc ~/.config/
+		echo -e "${GREEN}Successfully copied .czrc to home directory"
+	else
+		echo -e "${YELLOW}Copying .czrc directory to home directory${NC}"
+		cp -r ~/.dotfiles/.config/.czrc ~/.config/
+		echo -e "${GREEN}Successfully copied .czrc to home directory"
+	fi
+
 }
 
 echo -e "${YELLOW}Welcome to craftsdog setup installation script.${NC}"
@@ -77,7 +127,7 @@ select SELECTED_OPTION in "${options[@]}"; do
 		break
 		;;
 	"Move .config folders to user config directory ⬅️")
-		move_config_folders
+		move_config_folders_and_dotfiles
 		break
 		;;
 	"Run fish configuration script 🐟")
@@ -86,7 +136,7 @@ select SELECTED_OPTION in "${options[@]}"; do
 		;;
 	"Commando Mode (macOS) 💪")
 		check_brew
-		move_config_folders
+		move_config_folders_and_dotfiles
 		install_brew_packages
 		install_npm_packages
 		~/.dotfiles/.scripts/fish.sh
@@ -94,7 +144,7 @@ select SELECTED_OPTION in "${options[@]}"; do
 		;;
 	"Commando Mode (Ubuntu) 💪")
 		install_apt_packages
-		move_config_folders
+		move_config_folders_and_dotfiles
 		~/.dotfiles/.scripts/fish.sh
 		break
 		;;
