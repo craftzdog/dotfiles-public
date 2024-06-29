@@ -5,6 +5,15 @@ YELLOW='\033[1;33m'
 GREEN='\033[0;32m'
 NC='\033[0m' # No Color
 
+function check_command_execution() {
+	# Checks if the previous command executed successfully
+	if [ $? -eq 0 ]; then
+		echo -e "${GREEN}Successfully installed $1${NC}"
+	else
+		echo -e "${RED}Failed to install $1${NC}"
+	fi
+}
+
 function check_brew() {
 	if command -v brew &>/dev/null; then
 		echo -e "${GREEN}Homebrew is installed${NC}"
@@ -12,6 +21,7 @@ function check_brew() {
 		echo -e "${RED}Homebrew is not installed${NC}"
 		echo -e "${YELLOW}Installing Homebrew...${NC}"
 		/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+		check_command_execution "homebrew"
 	fi
 }
 
@@ -19,12 +29,14 @@ function install_brew_packages() {
 	echo -e "${YELLOW} Installing homebrew packages ${NC}"
 	ln -s "$HOME/.dotfiles/.scripts/Brewfile" "$HOME/Brewfile"
 	brew bundle install
+	check_command_execution "homebrew packages"
 }
 
 function install_apt_packages() {
 	echo -e "${YELLOW} Installing apt packages ${NC}"
 	if command -v apt &>/dev/null; then
 		sudo apt install "$(grep -vE "^\s*#" ~/.dotfiles/.scripts/apt-packages.txt | tr "\n" " ")"
+		check_command_execution "apt packages"
 	else
 		echo -e "${RED}You are not using ubuntu${NC}"
 	fi
@@ -33,6 +45,7 @@ function install_apt_packages() {
 function install_npm_packages() {
 	echo -e "${YELLOW} Installing npm packages ${NC}"
 	npm install -g commitizen cz-conventional-changelog
+	check_command_execution "npm packages"
 }
 
 function move_config_folders() {
