@@ -1,0 +1,6 @@
+fish
+eza
+fzf
+fd
+find
+ripgrep
