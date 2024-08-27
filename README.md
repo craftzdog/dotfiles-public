@@ -4,7 +4,7 @@
 
 # My dotfiles
 
-This is the repo to store all my dotfiles and personal configs. It is forked and modified from [Takuya's dotfiles](https://github.com/craftzdog/dotfiles-public). 
+This is the repo to store all my dotfiles and personal configs. It is forked and modified from [Takuya's dotfiles](https://github.com/craftzdog/dotfiles-public).
 
 ## Contents
 
@@ -47,7 +47,7 @@ This is the repo to store all my dotfiles and personal configs. It is forked and
 - [alacritty](https://alacritty.org) - A fast, cross-platform, OpenGL terminal emulator
 - [fish](https://fishshell.com/) - A smart and user-friendly command line shell for Linux, macOS, and the rest of the family
 - [fzf.fish](https://github.com/PatrickF1/fzf.fish) - Augment your fish with mnemonic key bindings to efficiently find what you need using fzf
-- [delta](https://github.com/dandavison/delta) - A syntax-highlighting pager for git, diff, and grep output 
+- [delta](https://github.com/dandavison/delta) - A syntax-highlighting pager for git, diff, and grep output
 
 ### For PowerShell on Windows
 
