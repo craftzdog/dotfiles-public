@@ -44,8 +44,8 @@ Check out my app called [Inkdrop](https://www.inkdrop.app/)
 
 - [Fish shell](https://fishshell.com/)
 - [Fisher](https://github.com/jorgebucaran/fisher) - Plugin manager
-- [Tide](https://github.com/IlanCosman/tide) - Shell theme. Use version 5: `fisher install ilancosman/tide@v5`
-- [Nerd fonts](https://github.com/ryanoasis/nerd-fonts) - Powerline-patched fonts. I use Hack.
+- [Tide](https://github.com/IlanCosman/tide) - Shell theme
+- [Nerd fonts](https://github.com/ryanoasis/nerd-fonts) - Patched fonts for development-use. I use [PlemolJP](https://github.com/yuru7/PlemolJP) and BlexMono.
 - [z for fish](https://github.com/jethrokuan/z) - Directory jumping
 - [Eza](https://github.com/eza-community/eza) - `ls` replacement
 - [ghq](https://github.com/x-motemen/ghq) - Local Git repository organizer
