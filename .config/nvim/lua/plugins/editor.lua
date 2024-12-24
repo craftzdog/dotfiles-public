@@ -218,9 +218,6 @@ return {
 				menu = {
 					winblend = vim.o.pumblend,
 				},
-				documentation = {
-					winblend = vim.o.pumblend,
-				},
 			},
 			signature = {
 				window = {
