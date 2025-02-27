@@ -67,3 +67,7 @@ Pods/
 
 # Karabiner
 .config/karabiner/automatic_backups
+
+# Tmux
+.config/tmux/plugins
+
