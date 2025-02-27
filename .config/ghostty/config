@@ -10,3 +10,7 @@ cursor-style = block
 cursor-style-blink = true
 
 #keybind = global:cmd+ctrl+shift+j=toggle_visibility
+
+macos-option-as-alt = left
+keybind = alt+left=unbind
+keybind = alt+right=unbind
