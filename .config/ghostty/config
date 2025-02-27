@@ -1,0 +1,12 @@
+theme = "Solarized Dark - Patched"
+
+background-opacity = 0.9
+background-blur-radius = 20
+background = #031219
+
+font-family = "PlemolJP Console NF"
+
+cursor-style = block
+cursor-style-blink = true
+
+#keybind = global:cmd+ctrl+shift+j=toggle_visibility
