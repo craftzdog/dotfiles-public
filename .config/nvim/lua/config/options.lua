@@ -53,3 +53,6 @@ vim.filetype.add({
 	},
 })
 
+vim.g.lazyvim_prettier_needs_config = true
+vim.g.lazyvim_picker = "telescope"
+vim.g.lazyvim_cmp = "blink.cmp"
