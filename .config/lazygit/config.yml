@@ -5,3 +5,5 @@ customCommands:
     context: "files"
     loadingText: "opening commitizen commit tool"
     subprocess: true
+gui:
+  mouseEvents: false
