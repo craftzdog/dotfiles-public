@@ -1,9 +1,6 @@
-# set PowerShell to UTF-8
-[console]::InputEncoding = [console]::OutputEncoding = New-Object System.Text.UTF8Encoding
-
 Import-Module posh-git
 $omp_config = Join-Path $PSScriptRoot ".\takuya.omp.json"
-oh-my-posh --init --shell pwsh --config $omp_config | Invoke-Expression
+oh-my-posh init pwsh --config $omp_config | Invoke-Expression
 
 Import-Module -Name Terminal-Icons
 
@@ -27,6 +24,10 @@ Set-Alias g git
 Set-Alias grep findstr
 Set-Alias tig 'C:\Program Files\Git\usr\bin\tig.exe'
 Set-Alias less 'C:\Program Files\Git\usr\bin\less.exe'
+
+# Paths
+$env:PATH += ';.\node_modules\.bin'
+$env:PATH += ';C:\Program Files (x86)\Windows Kits\10\bin\10.0.19041.0\x64'
 
 # Utilities
 function which ($command) {
